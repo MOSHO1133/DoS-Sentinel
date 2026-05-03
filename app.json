@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "DDoS Sentinel",
+    "slug": "ddos-sentinel",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#F4F5F7" },
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.hamzasajid.ddossentinel" },
+    "android": { "package": "com.hamzasajid.ddossentinel", "adaptiveIcon": { "backgroundColor": "#2B6CB0" } }
+  }
+}
