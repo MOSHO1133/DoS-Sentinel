@@ -1,4 +1,4 @@
-# DDoS Sentinel — AI-Powered Hybrid IDS Mobile Dashboard
+# DoS Sentinel — AI-Powered Hybrid IDS Mobile Dashboard
 
 <p align="center">
   <img src="https://img.shields.io/badge/Expo-54.0.0-black?style=flat-square&logo=expo" />
@@ -18,9 +18,9 @@ A real-time mobile Security Operations Center (SOC) dashboard for the **DDoS Sen
 
 ---
 
-## 🧠 What is DDoS Sentinel?
+## 🧠 What is DoS Sentinel?
 
-DDoS Sentinel is a hybrid Intrusion Detection System that combines:
+DoS Sentinel is a hybrid Intrusion Detection System that combines:
 
 | Layer | Technology | Best At |
 |-------|-----------|---------|
@@ -151,7 +151,7 @@ Table: `attack_logs` in Supabase
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOURUSERNAME/DDoS-Sentinel.git
+git clone https://github.com/MOSHO1133/DoS-Sentinel
 cd DDoS-Sentinel/sentinel3
 
 # Install dependencies
@@ -278,3 +278,8 @@ MIT — see [LICENSE](LICENSE)
 ---
 
 *Built with React Native + Expo + Supabase · DDoS Sentinel · 2026*
+
+![alt text](<WhatsApp Image 2026-05-03 at 7.26.44 PM.jpeg>)
+![alt text](<WhatsApp Image 2026-05-03 at 7.26.44 PM-1.jpeg>)
+![alt text](<WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg>)
+![alt text](<WhatsApp Image 2026-05-03 at 7.26.46 PM.jpeg>)
