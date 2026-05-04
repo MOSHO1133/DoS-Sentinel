@@ -33,10 +33,26 @@
 
 <div align="center">
 
-| 🏠 Home — Overview | 📊 Analytics | 🌐 Top Source IPs | ⚙️ Decision Engine |
-|:-:|:-:|:-:|:-:|
-| <img src="WhatsApp Image 2026-05-03 at 7.26.44 PM.jpeg" width="190"/> |  <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="190"/> | <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="190"/> | <img src="WhatsApp Image 2026-05-03 at 7.26.46 PM.jpeg" width="190"/> |
-| Live KPI strip · alert feed | 11 interactive charts | Ranked IPs · filter · expand | Fusion engine · confidence bars |
+<table>
+  <tr>
+    <td align="center"><b>🏠 Home — Overview</b></td>
+    <td align="center"><b>📊 Analytics</b></td>
+    <td align="center"><b>🌐 Top Source IPs</b></td>
+    <td align="center"><b>⚙️ Decision Engine</b></td>
+  </tr>
+  <tr>
+    <td><img src="WhatsApp Image 2026-05-03 at 7.26.44 PM.jpeg" width="220" height="477"/></td>
+    <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="220" height="477"//>
+    <td><img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="220" height="477"/></td>
+    <td><img src="WhatsApp Image 2026-05-03 at 7.26.46 PM.jpeg" width="220" height="477"/></td>
+  </tr>
+  <tr>
+    <td align="center">Live KPI strip · alert feed</td>
+    <td align="center">11 interactive charts</td>
+    <td align="center">Ranked IPs · filter · expand</td>
+    <td align="center">Fusion engine · confidence bars</td>
+  </tr>
+</table>
 
 </div>
 
@@ -131,22 +147,13 @@ Go to **Supabase Dashboard → Database → Replication** and enable `attack_log
 
 ## 🏗️ Architecture
 
-````
-hybrid_ids.py (Python IDS)
-````
-
-Replace that whole ASCII block with this:
-
-````md
-## 🏗️ Architecture
-
 <div align="center">
-  <img src="architecture.png" width="400"/>
-  <br/>
+  <img src="architecture.png" width="380"/>
+  <br/><br/>
   <em>DoS Sentinel — State Machine & Detection Flow</em>
 </div>
-````
-```
+
+<br/>
 
 ### Data Flow Strategy
 
@@ -329,9 +336,11 @@ sentinel3/
 
 <div align="center">
 
-| | Name | GitHub |
-|-|------|--------|
-| 👨‍💻 | **Muhammad Shees** | [@MOSHO1133](https://github.com/MOSHO1133) |
+| | Name | GitHub | Role |
+|-|------|--------|------|
+| 👨‍💻 | **Muhammad Shees** | [@MOSHO1133](https://github.com/MOSHO1133) | Mobile App · Integration |
+| 👨‍💻 | **Hamza Sajid** | [@HAMZOO0](https://github.com/HAMZOO0) | IDS Engine · ML Model |
+
 </div>
 
 ---
@@ -344,12 +353,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-Made by **Muhammad Shees** 
-
 **DoS Sentinel** · React Native · Expo · Supabase · PyTorch · 2026
 
 *⭐ Star this repo if you found it useful*
 
 </div>
-
-
