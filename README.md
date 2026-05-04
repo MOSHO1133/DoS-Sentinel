@@ -329,11 +329,9 @@ sentinel3/
 
 <div align="center">
 
-| | Name | GitHub | Role |
-|-|------|--------|------|
-| 👨‍💻 | **Muhammad Shees** | [@MOSHO1133](https://github.com/MOSHO1133) | Mobile App · Integration |
-| 👨‍💻 | **Hamza Sajid** | [@HAMZOO0](https://github.com/HAMZOO0) | IDS Engine · ML Model |
-
+| | Name | GitHub |
+|-|------|--------|
+| 👨‍💻 | **Muhammad Shees** | [@MOSHO1133](https://github.com/MOSHO1133) |
 </div>
 
 ---
@@ -346,7 +344,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-Made by **Muhammad Shees** & **Hamza Sajid**
+Made by **Muhammad Shees** 
 
 **DoS Sentinel** · React Native · Expo · Supabase · PyTorch · 2026
 
