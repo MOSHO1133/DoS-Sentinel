@@ -42,7 +42,7 @@
   </tr>
   <tr>
     <td><img src="WhatsApp Image 2026-05-03 at 7.26.44 PM.jpeg" width="220" height="477"/></td>
-    <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="220"//>
+    <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="190"/>
     <td><img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="220" height="477"/></td>
     <td><img src="WhatsApp Image 2026-05-03 at 7.26.46 PM.jpeg" width="220" height="477"/></td>
   </tr>
