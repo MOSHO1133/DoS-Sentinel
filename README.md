@@ -35,7 +35,7 @@
 
 | 🏠 Home — Overview | 📊 Analytics | 🌐 Top Source IPs | ⚙️ Decision Engine |
 |:-:|:-:|:-:|:-:|
-| <img src="WhatsApp Image 2026-05-03 at 7.26.44 PM.jpeg" width="190"/> | <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM.jpeg" width="190"/> | <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="190"/> | <img src="WhatsApp Image 2026-05-03 at 7.26.46 PM.jpeg" width="190"/> |
+| <img src="WhatsApp Image 2026-05-03 at 7.26.44 PM.jpeg" width="190"/> |  <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="190"/> | <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="190"/> | <img src="WhatsApp Image 2026-05-03 at 7.26.46 PM.jpeg" width="190"/> |
 | Live KPI strip · alert feed | 11 interactive charts | Ranked IPs · filter · expand | Fusion engine · confidence bars |
 
 </div>
