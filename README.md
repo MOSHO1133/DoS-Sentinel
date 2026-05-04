@@ -131,32 +131,21 @@ Go to **Supabase Dashboard → Database → Replication** and enable `attack_log
 
 ## 🏗️ Architecture
 
-```
+````
 hybrid_ids.py (Python IDS)
-       │
-       │  POST /store  ──►  Flask REST API
-       │                          │
-       │                     INSERT row
-       │                          │
-       │                          ▼
-       │               Supabase PostgreSQL
-       │                (attack_logs table)
-       │                          │
-       │            ┌─────────────┴──────────────┐
-       │            │                            │
-       │     Initial fetch                Real-time WebSocket
-       │     (all records,                (postgres_changes)
-       │      batched 1,000)              instant push
-       │            │                            │
-       │            └─────────────┬──────────────┘
-       │                          ▼
-       │                   DataContext.tsx
-       │              (derive stats · charts · topIPs)
-       │                          │
-       │     ┌────────────────────┼────────────────────┐
-       │     │                    │                    │
-       ▼     ▼                    ▼                    ▼
-     Home  Analytics           Top IPs            Engine
+````
+
+Replace that whole ASCII block with this:
+
+````md
+## 🏗️ Architecture
+
+<div align="center">
+  <img src="architecture.png" width="400"/>
+  <br/>
+  <em>DoS Sentinel — State Machine & Detection Flow</em>
+</div>
+````
 ```
 
 ### Data Flow Strategy
@@ -364,3 +353,5 @@ Made by **Muhammad Shees** & **Hamza Sajid**
 *⭐ Star this repo if you found it useful*
 
 </div>
+
+
