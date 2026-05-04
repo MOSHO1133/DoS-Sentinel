@@ -89,7 +89,7 @@ Live Traffic ──► NFStreamer ──► 50+ Features ──┬──► Heur
 ## 🏗️ Architecture
 
 <div align="center">
-  <img src="architecture.png" width="360"/>
+  <img src="WhatsApp Image 2026-05-04 at 1.00.12 PM.jpeg" width="360"/>
   <br/><br/>
   <em>DoS Sentinel — State Machine & Detection Flow</em>
 </div>
