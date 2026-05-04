@@ -23,7 +23,7 @@
 
 <br/>
 
-[📱 Screenshots](#-screenshots) · [🧠 How It Works](#-how-it-works) · [⚡ Quick Start](#-quick-start) · [🏗️ Architecture](#%EF%B8%8F-architecture) · [📊 Results](#-results) · [👥 Authors](#-authors)
+[📱 Screenshots](#-screenshots) · [🧠 How It Works](#-how-it-works) · [🏗️ Architecture](#%EF%B8%8F-architecture) · [📊 Results](#-results) · [⚡ Quick Start](#-quick-start) · [👤 Author](#-author)
 
 ---
 
@@ -35,22 +35,22 @@
 
 <table>
   <tr>
-    <td align="center"><b>🏠 Home — Overview</b></td>
-    <td align="center"><b>📊 Analytics</b></td>
-    <td align="center"><b>🌐 Top Source IPs</b></td>
-    <td align="center"><b>⚙️ Decision Engine</b></td>
+    <td align="center" width="25%"><b>🏠 Home — Overview</b></td>
+    <td align="center" width="25%"><b>📊 Analytics</b></td>
+    <td align="center" width="25%"><b>🌐 Top Source IPs</b></td>
+    <td align="center" width="25%"><b>⚙️ Decision Engine</b></td>
   </tr>
   <tr>
-    <td><img src="WhatsApp Image 2026-05-03 at 7.26.44 PM.jpeg" width="220" height="477"/></td>
-    <img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="190"/>
-    <td><img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="220" height="477"/></td>
-    <td><img src="WhatsApp Image 2026-05-03 at 7.26.46 PM.jpeg" width="220" height="477"/></td>
+    <td align="center"><img src="WhatsApp Image 2026-05-03 at 7.26.44 PM.jpeg" width="200" height="430"/></td>
+    <td align="center"><img src="WhatsApp Image 2026-05-03 at 7.26.45 PM.jpeg" width="200" height="430"/></td>
+    <td align="center"><img src="WhatsApp Image 2026-05-03 at 7.26.45 PM (1).jpeg" width="200" height="430"/></td>
+    <td align="center"><img src="WhatsApp Image 2026-05-03 at 7.26.46 PM.jpeg" width="200" height="430"/></td>
   </tr>
   <tr>
-    <td align="center">Live KPI strip · alert feed</td>
-    <td align="center">11 interactive charts</td>
-    <td align="center">Ranked IPs · filter · expand</td>
-    <td align="center">Fusion engine · confidence bars</td>
+    <td align="center"><sub>Live KPI strip · alert feed</sub></td>
+    <td align="center"><sub>11 interactive charts</sub></td>
+    <td align="center"><sub>Ranked IPs · filter · expand</sub></td>
+    <td align="center"><sub>Fusion engine · confidence bars</sub></td>
   </tr>
 </table>
 
@@ -83,6 +83,43 @@ Live Traffic ──► NFStreamer ──► 50+ Features ──┬──► Heur
 | `[H+D]` | Both Agreed | Independent consensus from both layers |
 | `[H~]` | Heuristic Fallback | DL uncertain — heuristic stepped in |
 | `[D~]` | DL Fallback | Heuristic said Normal — DL caught it |
+
+---
+
+## 🏗️ Architecture
+
+<div align="center">
+  <img src="architecture.png" width="360"/>
+  <br/><br/>
+  <em>DoS Sentinel — State Machine & Detection Flow</em>
+</div>
+
+<br/>
+
+### Data Flow
+
+```
+hybrid_ids.py  ──POST /store──►  Flask API  ──INSERT──►  Supabase PostgreSQL
+                                                               │
+                                              ┌────────────────┴────────────────┐
+                                              │ Initial fetch (all records)     │ Real-time WebSocket
+                                              │ batched 1,000 rows              │ instant INSERT push
+                                              └────────────────┬────────────────┘
+                                                               │
+                                                      DataContext.tsx
+                                                  (derive stats + charts)
+                                                               │
+                                     ┌─────────────┬──────────┴──────────┬─────────────┐
+                                     │    Home     │     Analytics       │   Top IPs   │  Engine
+                                     └─────────────┴─────────────────────┴─────────────┘
+```
+
+| Event | Behavior |
+|-------|----------|
+| 🚀 App opens | Fetches **all** records in batches of 1,000 rows |
+| ⚡ New attack detected | Received **instantly** via Supabase WebSocket |
+| 🔄 WebSocket fails | Automatically polls every 15 seconds |
+| 👆 Pull to refresh | Manual re-fetch of all records |
 
 ---
 
@@ -142,27 +179,6 @@ ALTER TABLE attack_logs REPLICA IDENTITY FULL;
 ```
 
 Go to **Supabase Dashboard → Database → Replication** and enable `attack_logs`.
-
----
-
-## 🏗️ Architecture
-
-<div align="center">
-  <img src="architecture.png" width="380"/>
-  <br/><br/>
-  <em>DoS Sentinel — State Machine & Detection Flow</em>
-</div>
-
-<br/>
-
-### Data Flow Strategy
-
-| Event | Behavior |
-|-------|----------|
-| 🚀 App opens | Fetches **all** records in batches of 1,000 rows |
-| ⚡ New attack inserted | Received **instantly** via Supabase WebSocket |
-| 🔄 WebSocket fails | Automatically polls every 15 seconds |
-| 👆 Pull to refresh | Manual re-fetch of all records |
 
 ---
 
@@ -274,7 +290,6 @@ sentinel3/
 ├── babel.config.js                  # Babel config
 ├── package.json                     # Dependencies
 ├── tsconfig.json                    # TypeScript config
-│
 └── src/
     ├── lib/
     │   └── supabase.ts              # Supabase client + credentials
@@ -332,14 +347,13 @@ sentinel3/
 
 ---
 
-## 👥 Authors
+## 👤 Author
 
 <div align="center">
 
-| | Name | GitHub | Role |
-|-|------|--------|------|
-| 👨‍💻 | **Muhammad Shees** | [@MOSHO1133](https://github.com/MOSHO1133) | Mobile App · Integration |
-| 👨‍💻 | **Hamza Sajid** | [@HAMZOO0](https://github.com/HAMZOO0) | IDS Engine · ML Model |
+| | Name | GitHub |
+|-|------|--------|
+| 👨‍💻 | **Muhammad Shees** | [@MOSHO1133](https://github.com/MOSHO1133) |
 
 </div>
 
@@ -352,6 +366,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <div align="center">
+
+Made by **Muhammad Shees**
 
 **DoS Sentinel** · React Native · Expo · Supabase · PyTorch · 2026
 
