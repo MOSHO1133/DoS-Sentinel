@@ -347,30 +347,4 @@ sentinel3/
 
 ---
 
-## 👤 Author
 
-<div align="center">
-
-| | Name | GitHub |
-|-|------|--------|
-| 👨‍💻 | **Muhammad Shees** | [@MOSHO1133](https://github.com/MOSHO1133) |
-
-</div>
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-Made by **Muhammad Shees**
-
-**DoS Sentinel** · React Native · Expo · Supabase · PyTorch · 2026
-
-*⭐ Star this repo if you found it useful*
-
-</div>
